@@ -4,7 +4,7 @@ scrape_configs:
   - job_name: 'exporter-node'
     scrape_interval: 5s
     static_configs:
-      - targets: ['0.0.0.0:9100']
+      - targets: ['exporter-node:9100']
         labels:
           groups: ''
 
