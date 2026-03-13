@@ -1,0 +1,8 @@
+---
+
+include:
+  - ./prometheus.compose.yml
+  - ./exporter-node.compose.yml
+networks:
+  monitoring:
+    driver: bridge
