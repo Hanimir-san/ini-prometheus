@@ -3,6 +3,7 @@
 include:
   - ./prometheus.compose.yml
   - ./exporter-node.compose.yml
+  - ./grafana.compose.yml
 networks:
   monitoring:
     driver: bridge

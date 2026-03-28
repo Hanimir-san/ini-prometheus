@@ -1,0 +1,20 @@
+services:
+    grafana:
+      image: grafana/grafana:main-ubuntu
+      container_name: grafana
+      ports:
+        - "3000:3000"
+      expose:
+        - 3000
+      extra_hosts:       
+        - "host.docker.internal:host-gateway"
+      environment:
+        - GF_SECURITY_ADMIN_PASSWORD=${PW_GRAFANA_ADMIN}
+      volumes:
+        - data_grafana:/var/lib/grafana
+      networks:
+        - monitoring
+      restart: unless-stopped
+
+volumes:
+  data_grafana:
