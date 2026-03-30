@@ -1,0 +1,4 @@
+# Authentication configuration
+# default password is set to be test123. Has is bcrypt.
+basic_auth_users:
+  admin: $2a$12$GZHN5fSmAsAPw8p6q5fqHenzFIKV9MFBapyiaPnWI36ib6.c/5br2

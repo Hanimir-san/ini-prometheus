@@ -3,6 +3,7 @@ services:
     image: 'prom/prometheus:latest'
     container_name: prometheus
     restart: unless-stopped
+    command: --config.file /etc/prometheus/prometheus.yml --web.config.file /etc/prometheus/prometheus-web.yml
     extra_hosts:       
       - "host.docker.internal:host-gateway"
     ports:
